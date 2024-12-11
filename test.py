@@ -26,7 +26,7 @@ async def kick(ctx, member: discord.Member, *, reason=None):
         await member.kick(reason=reason)
         # Send a confirmation message
         await ctx.send(f"Successfully kicked {member.mention}")
-        # Alert for needed perms
+        # Alert for needed permissions
     except discord.Forbidden:
         await ctx.send("I don't have permission to kick members.")
     except discord.HTTPException:
